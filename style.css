@@ -599,6 +599,152 @@ nav ul li a{
     grid-template-columns:1fr;
 
 }
+   /* =========================
+   STATS
+========================= */
+
+
+.stats-container{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:25px;
+
+}
+
+
+.stat{
+
+background:#151515;
+
+padding:40px;
+
+text-align:center;
+
+border-radius:20px;
+
+}
+
+
+.stat h3{
+
+font-size:50px;
+
+color:#f5c542;
+
+}
+
+
+.stat p{
+
+font-size:18px;
+
+}
+
+
+
+/* =========================
+   NEWS
+========================= */
+
+
+.news-container{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:25px;
+
+}
+
+
+.news-card{
+
+background:#151515;
+
+padding:30px;
+
+border-radius:20px;
+
+transition:.3s;
+
+}
+
+
+.news-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+
+.news-card h3{
+
+color:#f5c542;
+
+margin-bottom:15px;
+
+}
+
+
+.news-card span{
+
+display:block;
+
+margin-top:15px;
+
+color:#aaa;
+
+}
+
+
+
+/* =========================
+   DARK BUTTON
+========================= */
+
+
+#modeBtn{
+
+background:#f5c542;
+
+border:none;
+
+padding:10px 15px;
+
+border-radius:20px;
+
+cursor:pointer;
+
+font-size:18px;
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:900px){
+
+
+.stats-container{
+
+grid-template-columns:1fr;
+
+}
+
+
+.news-container{
+
+grid-template-columns:1fr;
+
+}
+
+
+}
 
 
 
