@@ -130,3 +130,62 @@ window.addEventListener("scroll",()=>{
 
 
 });
+// =========================
+// Counter Animation
+// =========================
+
+
+let counters = document.querySelectorAll(".counter");
+
+
+counters.forEach(counter=>{
+
+
+let target = +counter.dataset.target;
+
+
+let count = 0;
+
+
+let update = setInterval(()=>{
+
+
+count++;
+
+
+counter.innerHTML=count;
+
+
+if(count >= target){
+
+clearInterval(update);
+
+}
+
+
+},50);
+
+
+
+});
+
+
+
+
+
+// =========================
+// Dark Mode
+// =========================
+
+
+let modeBtn = document.getElementById("modeBtn");
+
+
+modeBtn.onclick=function(){
+
+
+document.body.classList.toggle("light");
+
+
+};
+
