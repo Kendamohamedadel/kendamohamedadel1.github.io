@@ -1,5 +1,5 @@
 /* =========================
-   Global Settings
+   RESET
 ========================= */
 
 *{
@@ -13,7 +13,7 @@ body{
     font-family:'Poppins',sans-serif;
     background:#0b0b0b;
     color:white;
-    line-height:1.6;
+    overflow-x:hidden;
 }
 
 a{
@@ -22,27 +22,30 @@ a{
 }
 
 section{
-    padding:80px 8%;
+    padding:90px 8%;
 }
 
 h2{
     text-align:center;
-    font-size:40px;
-    margin-bottom:50px;
+    font-size:42px;
     color:#f5c542;
+    margin-bottom:50px;
 }
 
 
+
 /* =========================
-   Navigation
+        NAVBAR
 ========================= */
+
 
 nav{
 
     position:fixed;
     top:0;
+    left:0;
+
     width:100%;
-    z-index:1000;
 
     display:flex;
     justify-content:space-between;
@@ -50,36 +53,66 @@ nav{
 
     padding:20px 8%;
 
-    background:rgba(0,0,0,.75);
+    background:rgba(0,0,0,.85);
+
     backdrop-filter:blur(10px);
 
+    z-index:1000;
+
 }
+
 
 
 .logo{
 
-    font-size:25px;
-    font-weight:700;
     color:#f5c542;
 
+    font-size:25px;
+
+    font-weight:700;
+
+    white-space:nowrap;
+
 }
+
 
 
 nav ul{
 
     display:flex;
+
+    flex-direction:row;
+
+    align-items:center;
+
     gap:30px;
+
     list-style:none;
 
 }
 
 
-nav ul li a{
 
-    font-weight:500;
-    transition:.3s;
+nav ul li{
+
+    display:inline-block;
 
 }
+
+
+
+nav ul li a{
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    white-space:nowrap;
+
+}
+
 
 
 nav ul li a:hover{
@@ -91,7 +124,7 @@ nav ul li a:hover{
 
 
 /* =========================
-   Hero Section
+        HERO
 ========================= */
 
 
@@ -99,26 +132,25 @@ header{
 
     height:100vh;
 
-    background:url("hero.jpg");
+    background:url("hero.jpg") center/cover;
 
-    background-size:cover;
-    background-position:center;
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
 
     position:relative;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
 }
+
 
 
 .overlay{
 
     position:absolute;
 
-    width:100%;
-    height:100%;
+    inset:0;
 
     background:rgba(0,0,0,.65);
 
@@ -132,36 +164,39 @@ header{
 
     text-align:center;
 
-    max-width:800px;
+    max-width:900px;
 
 }
 
 
+
 .hero h1{
 
-    font-size:65px;
+    font-size:70px;
 
     color:#f5c542;
 
 }
 
 
+
 .hero h2{
 
-    font-size:30px;
-
     color:white;
+
+    font-size:32px;
 
     margin:20px 0;
 
 }
 
 
+
 .hero p{
 
     font-size:20px;
 
-    margin-bottom:30px;
+    margin-bottom:35px;
 
 }
 
@@ -171,19 +206,20 @@ header{
 
     display:inline-block;
 
-    padding:15px 35px;
-
     background:#f5c542;
 
-    color:black;
+    color:#000;
 
-    border-radius:30px;
+    padding:15px 40px;
+
+    border-radius:40px;
 
     font-weight:bold;
 
     transition:.3s;
 
 }
+
 
 
 .btn:hover{
@@ -195,7 +231,7 @@ header{
 
 
 /* =========================
-   About
+        ABOUT
 ========================= */
 
 
@@ -210,6 +246,7 @@ header{
 }
 
 
+
 .about img{
 
     width:350px;
@@ -221,6 +258,7 @@ header{
 }
 
 
+
 .about p{
 
     font-size:20px;
@@ -230,7 +268,7 @@ header{
 
 
 /* =========================
-   Achievements Cards
+        CARDS
 ========================= */
 
 
@@ -245,9 +283,10 @@ header{
 }
 
 
+
 .card{
 
-    background:#161616;
+    background:#151515;
 
     padding:40px 20px;
 
@@ -255,11 +294,12 @@ header{
 
     border-radius:20px;
 
-    transition:.4s;
-
     border:1px solid #333;
 
+    transition:.4s;
+
 }
+
 
 
 .card i{
@@ -273,28 +313,19 @@ header{
 }
 
 
-.card h3{
-
-    font-size:25px;
-
-    margin-bottom:10px;
-
-}
-
-
 
 .card:hover{
 
     transform:translateY(-15px);
 
-    box-shadow:0 10px 30px rgba(245,197,66,.4);
+    box-shadow:0 0 30px #f5c542;
 
 }
 
 
 
 /* =========================
-   Gallery
+        GALLERY
 ========================= */
 
 
@@ -309,6 +340,7 @@ header{
 }
 
 
+
 .gallery img{
 
     width:100%;
@@ -317,13 +349,14 @@ header{
 
     object-fit:cover;
 
-    border-radius:15px;
+    border-radius:20px;
 
     cursor:pointer;
 
     transition:.4s;
 
 }
+
 
 
 .gallery img:hover{
@@ -335,7 +368,7 @@ header{
 
 
 /* =========================
-   Video
+        VIDEO
 ========================= */
 
 
@@ -346,6 +379,7 @@ header{
     justify-content:center;
 
 }
+
 
 
 .video video{
@@ -361,7 +395,7 @@ header{
 
 
 /* =========================
-   Contact
+        CONTACT
 ========================= */
 
 
@@ -374,6 +408,7 @@ header{
 }
 
 
+
 .contact p{
 
     margin:15px;
@@ -381,18 +416,17 @@ header{
 }
 
 
+
 .contact i{
 
     color:#f5c542;
-
-    margin-right:10px;
 
 }
 
 
 
 /* =========================
-   Footer
+        FOOTER
 ========================= */
 
 
@@ -411,7 +445,7 @@ footer{
 
 
 /* =========================
-   Back To Top Button
+        TOP BUTTON
 ========================= */
 
 
@@ -419,20 +453,13 @@ footer{
 
     position:fixed;
 
-    right:25px;
-
     bottom:25px;
+
+    right:25px;
 
     width:50px;
 
     height:50px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
 
     background:#f5c542;
 
@@ -440,14 +467,18 @@ footer{
 
     border-radius:50%;
 
-    font-size:20px;
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
 
 }
 
 
 
 /* =========================
-   Image Popup
+        IMAGE POPUP
 ========================= */
 
 
@@ -461,9 +492,9 @@ footer{
 
     display:none;
 
-    justify-content:center;
-
     align-items:center;
+
+    justify-content:center;
 
     z-index:2000;
 
@@ -487,13 +518,11 @@ footer{
 
     position:absolute;
 
-    top:30px;
+    top:20px;
 
-    right:50px;
+    right:40px;
 
     font-size:50px;
-
-    color:white;
 
     cursor:pointer;
 
@@ -502,41 +531,7 @@ footer{
 
 
 /* =========================
-   Animation
-========================= */
-
-
-section{
-
-    animation:fade 1s ease;
-
-}
-
-
-@keyframes fade{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(30px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
-
-}
-
-
-
-/* =========================
-   Mobile Responsive
+        MOBILE
 ========================= */
 
 
@@ -545,20 +540,34 @@ section{
 
 nav{
 
-    flex-direction:column;
+    padding:15px 3%;
 
 }
+
+
+
+.logo{
+
+    font-size:18px;
+
+}
+
 
 
 nav ul{
 
-    margin-top:15px;
-
-    flex-wrap:wrap;
-
-    justify-content:center;
+    gap:12px;
 
 }
+
+
+
+nav ul li a{
+
+    font-size:12px;
+
+}
+
 
 
 .hero h1{
@@ -569,11 +578,20 @@ nav ul{
 
 
 
+.hero h2{
+
+    font-size:22px;
+
+}
+
+
+
 .about{
 
     flex-direction:column;
 
 }
+
 
 
 .cards{
