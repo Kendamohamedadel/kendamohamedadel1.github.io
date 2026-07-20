@@ -368,28 +368,19 @@ header{
 
 
 /* =========================
-        VIDEO
+        VIDEOS
 ========================= */
 
-
-.video{
-
-    display:flex;
-
-    justify-content:center;
-
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
 }
 
-
-
-.video video{
-
-    width:80%;
-
+.video-grid video{
+    width:100%;
     border-radius:20px;
-
-    box-shadow:0 0 30px #f5c542;
-
+    box-shadow:0 0 20px rgba(245,197,66,.4);
 }
 
 
