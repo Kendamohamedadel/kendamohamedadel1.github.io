@@ -1,1 +1,14 @@
+[12:13 pm, 13/8/2026] mohamed adel: User-agent: *
+Allow: /
 
+Sitemap: https://kendamohamedadel.github.io/kendamohamedadel1.github.io/sitemap.xml
+[12:14 pm, 13/8/2026] mohamed adel: <?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://kendamohamedadel.github.io/kendamohamedadel1.github.io/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+</urlset>
