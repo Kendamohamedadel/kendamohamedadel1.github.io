@@ -1,1 +1,522 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kenda Mohamed Adel Achievements | Egyptian Taekwondo Champion</title>
+
+<meta name="description" content="Kenda Mohamed Adel Taekwondo achievements: two-time Egyptian National Kyorugi Champion, three-time Egyptian National Poomsae Champion and three-time Egypt Cup Poomsae Champion.">
+
+<meta name="keywords" content="Kenda Mohamed Adel achievements, Kenda Mohamed Adel Taekwondo, كنده محمد عادل, كنده محمد عادل تايكوندو, Egyptian Taekwondo Champion, Egyptian National Kyorugi Champion, Egyptian National Poomsae Champion, Egypt Cup Poomsae, Skills Platinum Sport">
+
+<meta name="author" content="Kenda Mohamed Adel">
+
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<link rel="canonical" href="https://kendamohamedadel.github.io/kendamohamedadel1.github.io/achievements.html">
+
+
+<!-- Open Graph -->
+
+<meta property="og:title" content="Kenda Mohamed Adel Achievements | Egyptian Taekwondo Champion">
+
+<meta property="og:description" content="Championship achievements and Taekwondo titles of Kenda Mohamed Adel.">
+
+<meta property="og:type" content="profile">
+
+<meta property="og:url" content="https://kendamohamedadel.github.io/kendamohamedadel1.github.io/achievements.html">
+
+<meta property="og:site_name" content="Kenda Mohamed Adel">
+
+<meta property="og:image" content="https://kendamohamedadel.github.io/kendamohamedadel1.github.io/photo1.jpeg">
+
+<meta property="og:image:alt" content="Kenda Mohamed Adel Taekwondo Champion">
+
+
+<!-- Favicon -->
+
+<link rel="icon" href="favicon.png">
+
+
+<!-- CSS -->
+
+<link rel="stylesheet" href="style.css">
+
+
+<!-- Google Fonts -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+
+<!-- Font Awesome -->
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+<!-- Structured Data -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@type": "Person",
+      "@id": "https://kendamohamedadel.github.io/kendamohamedadel1.github.io/#kenda",
+      "name": "Kenda Mohamed Adel",
+      "alternateName": [
+        "كنده محمد عادل",
+        "كِندة محمد عادل"
+      ],
+      "url": "https://kendamohamedadel.github.io/kendamohamedadel1.github.io/",
+      "image": "https://kendamohamedadel.github.io/kendamohamedadel1.github.io/photo1.jpeg",
+      "jobTitle": "Taekwondo Athlete",
+      "description": "Egyptian Taekwondo athlete and champion in Kyorugi and Poomsae.",
+      "sport": "Taekwondo",
+      "nationality": {
+        "@type": "Country",
+        "name": "Egypt"
+      },
+      "memberOf": {
+        "@type": "SportsOrganization",
+        "name": "Skills Platinum Sport"
+      }
+    },
+
+    {
+      "@type": "WebPage",
+      "@id": "https://kendamohamedadel.github.io/kendamohamedadel1.github.io/achievements.html#webpage",
+      "url": "https://kendamohamedadel.github.io/kendamohamedadel1.github.io/achievements.html",
+      "name": "Kenda Mohamed Adel Achievements",
+      "description": "Championship achievements of Egyptian Taekwondo Champion Kenda Mohamed Adel.",
+      "about": {
+        "@id": "https://kendamohamedadel.github.io/kendamohamedadel1.github.io/#kenda"
+      }
+    }
+
+  ]
+}
+</script>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+<div class="logo">
+Kenda Mohamed Adel
+</div>
+
+<ul>
+
+<li>
+<a href="index.html">Home</a>
+</li>
+
+<li>
+<a href="about.html">About Kenda</a>
+</li>
+
+<li>
+<a href="achievements.html">Achievements</a>
+</li>
+
+<li>
+<a href="index.html#journey">Journey</a>
+</li>
+
+<li>
+<a href="index.html#gallery">Gallery</a>
+</li>
+
+<li>
+<a href="index.html#media">Media</a>
+</li>
+
+<li>
+<a href="index.html#videos">Videos</a>
+</li>
+
+<li>
+<a href="index.html#news">News</a>
+</li>
+
+<li>
+<a href="index.html#contact">Contact</a>
+</li>
+
+</ul>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header>
+
+<div class="overlay"></div>
+
+<div class="hero">
+
+<h1>
+Kenda Mohamed Adel
+</h1>
+
+<h2>
+Taekwondo Achievements
+</h2>
+
+<p>
+Egyptian Taekwondo Champion with major achievements
+in Kyorugi and Poomsae.
+</p>
+
+</div>
+
+</header>
+
+
+<!-- =========================
+     ACHIEVEMENTS
+========================= -->
+
+<section id="achievements">
+
+<h2>
+Kenda Mohamed Adel Championship Achievements
+</h2>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<i class="fa-solid fa-medal"></i>
+
+<h3>
+2×
+</h3>
+
+<p>
+<strong>Egyptian National Kyorugi Champion</strong>
+</p>
+
+<p>
+Kenda Mohamed Adel is a two-time Egyptian
+National Champion in Kyorugi.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<i class="fa-solid fa-medal"></i>
+
+<h3>
+3×
+</h3>
+
+<p>
+<strong>Egyptian National Poomsae Champion</strong>
+</p>
+
+<p>
+Three-time Egyptian National Champion
+in Poomsae.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<i class="fa-solid fa-trophy"></i>
+
+<h3>
+3×
+</h3>
+
+<p>
+<strong>Egypt Cup Poomsae Champion</strong>
+</p>
+
+<p>
+Three-time Egypt Cup Champion
+in Poomsae.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<i class="fa-solid fa-star"></i>
+
+<h3>
+Multiple Gold Medals
+</h3>
+
+<p>
+Kenda has won numerous gold medals
+in Taekwondo championships in Fayoum,
+Alexandria and Sharqia.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CHAMPIONSHIP RECORD
+========================= -->
+
+<section>
+
+<h2>
+Championship Record
+</h2>
+
+
+<div class="timeline">
+
+
+<div class="timeline-item">
+
+<div class="timeline-icon">
+🥇
+</div>
+
+<div class="timeline-content">
+
+<h3>
+Egyptian National Championship
+</h3>
+
+<p>
+Gold medal achievement in Poomsae.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="timeline-icon">
+🥇
+</div>
+
+<div class="timeline-content">
+
+<h3>
+Egypt Cup
+</h3>
+
+<p>
+Gold medal achievement in Poomsae.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="timeline-icon">
+🥇
+</div>
+
+<div class="timeline-content">
+
+<h3>
+Egyptian National Championship
+</h3>
+
+<p>
+National championship success in Taekwondo.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="timeline-icon">
+🏆
+</div>
+
+<div class="timeline-content">
+
+<h3>
+Fayoum Championships</h3>
+
+<p>
+Kenda Mohamed Adel has earned gold and silver
+medals in Fayoum Taekwondo competitions.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="timeline-icon">
+🏆
+</div>
+
+<div class="timeline-content">
+
+<h3>
+Alexandria Championships
+</h3>
+
+<p>
+Multiple successful performances and medals
+in Alexandria competitions.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="timeline-icon">
+🏆
+</div>
+
+<div class="timeline-content">
+
+<h3>
+Sharqia Championships
+</h3>
+
+<p>
+Kenda has won multiple gold medals
+in Sharqia Taekwondo championships.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     SUMMARY
+========================= -->
+
+<section>
+
+<h2>
+Kenda Mohamed Adel Taekwondo Profile
+</h2>
+
+<div class="about">
+
+<img
+src="photo1.jpeg"
+alt="Kenda Mohamed Adel Egyptian Taekwondo Champion"
+loading="lazy"
+>
+
+<div>
+
+<p>
+<strong>Kenda Mohamed Adel</strong> is an Egyptian Taekwondo
+athlete representing <strong>Skills Platinum Sport</strong>.
+</p>
+
+<p>
+Her competitive record includes
+<strong>two Egyptian National Kyorugi titles</strong>,
+<strong>three Egyptian National Poomsae titles</strong>,
+and <strong>three Egypt Cup Poomsae titles</strong>.
+</p>
+
+<p>
+She has also achieved numerous gold medals
+in championships held in Fayoum, Alexandria and Sharqia.
+</p>
+
+<p>
+<strong>Coaches:</strong>
+Captain Khaled Sultan & Captain Mohamed Sultan
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<p>
+
+© 2026 Kenda Mohamed Adel
+
+<br>
+
+All Rights Reserved
+
+</p>
+
+</footer>
+
+
+<!-- BACK TO TOP -->
+
+<a
+href="#"
+id="topBtn"
+aria-label="Back to top"
+>
+
+<i class="fa-solid fa-arrow-up"></i>
+
+</a>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
