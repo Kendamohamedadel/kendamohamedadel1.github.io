@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
 
+Sitemap: https://kendamohamedadel.github.io/kendamohamedadel1.github.io/sitemap.xml
