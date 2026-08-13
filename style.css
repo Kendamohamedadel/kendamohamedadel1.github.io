@@ -747,3 +747,71 @@ section.visible {
         font-size: 42px;
     }
 }
+
+/* =========================
+   FIX CAREER STATISTICS
+========================= */
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stat {
+    min-width: 0;
+    text-align: center;
+    background: #151515;
+    padding: 35px 15px;
+    border-radius: 20px;
+    border: 1px solid #292929;
+}
+
+.stat h3 {
+    font-size: 50px;
+    color: #f5c542;
+    margin: 10px 0;
+}
+
+.stat p {
+    font-size: 17px;
+    color: #ccc;
+}
+
+
+/* Tablets */
+
+@media (max-width: 900px) {
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* Phones */
+
+@media (max-width: 600px) {
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .stat {
+        padding: 25px 10px;
+    }
+
+    .stat h3 {
+        font-size: 38px;
+    }
+
+    .stat p {
+        font-size: 14px;
+    }
+
+}
