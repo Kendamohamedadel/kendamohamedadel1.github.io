@@ -301,16 +301,18 @@ header {
 
 .stats-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 25px;
-    max-width: 1100px;
-    margin: auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .stat {
-    background: #151515;
-    padding: 35px 20px;
+    min-width: 0;
     text-align: center;
+    background: #151515;
+    padding: 35px 15px;
     border-radius: 20px;
     border: 1px solid #292929;
 }
@@ -324,7 +326,7 @@ header {
     font-size: 50px;
     color: #f5c542;
     line-height: 1.2;
-    margin: 12px 0;
+    margin: 10px 0;
 }
 
 .stat p {
@@ -447,6 +449,73 @@ header {
 
 
 /* =========================
+   SOCIAL MEDIA
+========================= */
+
+#social {
+    text-align: center;
+    background:
+        linear-gradient(
+            rgba(245, 197, 66, 0.03),
+            rgba(245, 197, 66, 0.01)
+        );
+}
+
+#social > p {
+    max-width: 750px;
+    margin: -20px auto 40px;
+    color: #ccc;
+    font-size: 17px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.social-links a {
+    flex: 1;
+    min-width: 180px;
+    background: #151515;
+    border: 1px solid #292929;
+    border-radius: 22px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: 0.35s ease;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+.social-links a i {
+    font-size: 45px;
+    color: #f5c542;
+    transition: 0.35s ease;
+}
+
+.social-links a span {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.social-links a:hover {
+    transform: translateY(-8px);
+    border-color: #f5c542;
+    box-shadow: 0 12px 35px rgba(245, 197, 66, 0.18);
+}
+
+.social-links a:hover i {
+    transform: scale(1.15);
+}
+
+
+/* =========================
    CONTACT
 ========================= */
 
@@ -464,6 +533,14 @@ header {
     margin-right: 8px;
 }
 
+.contact a {
+    transition: 0.3s;
+}
+
+.contact a:hover {
+    color: #f5c542;
+}
+
 
 /* =========================
    FOOTER
@@ -472,8 +549,35 @@ header {
 footer {
     background: #000;
     text-align: center;
-    padding: 25px;
+    padding: 30px 20px;
     color: #aaa;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.footer-social a {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f5c542;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    background: #f5c542;
+    color: #000;
+    transform: translateY(-4px);
 }
 
 
@@ -495,6 +599,10 @@ footer {
     justify-content: center;
     z-index: 1500;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+#topBtn:hover {
+    transform: translateY(-4px);
 }
 
 
@@ -554,7 +662,7 @@ section.visible {
 
 
 /* =========================
-   MOBILE
+   TABLET
 ========================= */
 
 @media (max-width: 900px) {
@@ -656,8 +764,24 @@ section.visible {
     .timeline-content {
         width: 100%;
     }
+
+    /* Social Media */
+
+    .social-links {
+        gap: 15px;
+    }
+
+    .social-links a {
+        min-width: 0;
+        padding: 25px 15px;
+    }
+
 }
 
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 600px) {
 
@@ -706,8 +830,8 @@ section.visible {
     }
 
     .stats-container {
-        grid-template-columns: 1fr 1fr;
-        gap: 15px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
 
     .stat {
@@ -735,6 +859,78 @@ section.visible {
         padding: 20px;
     }
 
+
+    /* =========================
+       SOCIAL MOBILE
+    ========================= */
+
+    #social > p {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+
+    .social-links {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        max-width: 400px;
+    }
+
+    .social-links a {
+        min-width: 100%;
+        padding: 20px;
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+        border-radius: 18px;
+    }
+
+    .social-links a i {
+        font-size: 30px;
+    }
+
+    .social-links a span {
+        font-size: 16px;
+    }
+
+
+    /* =========================
+       CONTACT MOBILE
+    ========================= */
+
+    .contact {
+        font-size: 16px;
+    }
+
+    .contact p {
+        margin: 18px 5px;
+        word-break: break-word;
+    }
+
+
+    /* =========================
+       FOOTER MOBILE
+    ========================= */
+
+    footer {
+        padding: 25px 15px;
+    }
+
+    .footer-social {
+        gap: 12px;
+    }
+
+    .footer-social a {
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+    }
+
+
+    /* =========================
+       BACK TO TOP
+    ========================= */
+
     #topBtn {
         right: 15px;
         bottom: 15px;
@@ -745,73 +941,6 @@ section.visible {
     #close {
         right: 20px;
         font-size: 42px;
-    }
-}
-
-/* =========================
-   FIX CAREER STATISTICS
-========================= */
-
-.stats-container {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 25px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.stat {
-    min-width: 0;
-    text-align: center;
-    background: #151515;
-    padding: 35px 15px;
-    border-radius: 20px;
-    border: 1px solid #292929;
-}
-
-.stat h3 {
-    font-size: 50px;
-    color: #f5c542;
-    margin: 10px 0;
-}
-
-.stat p {
-    font-size: 17px;
-    color: #ccc;
-}
-
-
-/* Tablets */
-
-@media (max-width: 900px) {
-
-    .stats-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
-
-/* Phones */
-
-@media (max-width: 600px) {
-
-    .stats-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-    }
-
-    .stat {
-        padding: 25px 10px;
-    }
-
-    .stat h3 {
-        font-size: 38px;
-    }
-
-    .stat p {
-        font-size: 14px;
     }
 
 }
