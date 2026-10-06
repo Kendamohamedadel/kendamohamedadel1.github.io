@@ -1,31 +1,50 @@
-// =========================
+// ======================================================
+// Kenda Mohamed Adel - Main Website JavaScript
+// Official Website
+// ======================================================
+
+
+// ======================================================
 // Image Gallery Popup
-// =========================
+// ======================================================
 
 const images = document.querySelectorAll(".gallery img");
 const popup = document.getElementById("popup");
 const popupImg = document.getElementById("popup-img");
 const closeBtn = document.getElementById("close");
 
-images.forEach((image) => {
 
-    image.addEventListener("click", () => {
+if (images.length && popup && popupImg) {
 
-        popup.style.display = "flex";
+    images.forEach((image) => {
 
-        popupImg.src = image.src;
+        image.addEventListener("click", () => {
 
-        popupImg.alt =
-            image.alt || "Kenda Mohamed Adel";
+            popup.style.display = "flex";
 
-        document.body.style.overflow = "hidden";
+            popupImg.src = image.src;
+
+            popupImg.alt =
+                image.alt || "Kenda Mohamed Adel - Taekwondo Champion";
+
+            document.body.style.overflow = "hidden";
+
+        });
 
     });
 
-});
+}
 
+
+// ======================================================
+// Close Gallery Popup
+// ======================================================
 
 function closePopup() {
+
+    if (!popup) {
+        return;
+    }
 
     popup.style.display = "none";
 
@@ -33,6 +52,8 @@ function closePopup() {
 
 }
 
+
+// Close button
 
 if (closeBtn) {
 
@@ -44,11 +65,13 @@ if (closeBtn) {
 }
 
 
+// Close by clicking outside image
+
 if (popup) {
 
-    popup.addEventListener("click", (e) => {
+    popup.addEventListener("click", (event) => {
 
-        if (e.target === popup) {
+        if (event.target === popup) {
 
             closePopup();
 
@@ -59,13 +82,13 @@ if (popup) {
 }
 
 
-// =========================
-// ESC closes image popup
-// =========================
+// ======================================================
+// ESC - Close Image Popup
+// ======================================================
 
-document.addEventListener("keydown", (e) => {
+document.addEventListener("keydown", (event) => {
 
-    if (e.key === "Escape") {
+    if (event.key === "Escape") {
 
         closePopup();
 
@@ -74,9 +97,9 @@ document.addEventListener("keydown", (e) => {
 });
 
 
-// =========================
+// ======================================================
 // Back To Top Button
-// =========================
+// ======================================================
 
 const topBtn =
     document.getElementById("topBtn");
@@ -85,22 +108,23 @@ const nav =
     document.querySelector("nav");
 
 
-window.addEventListener("scroll", () => {
+function handleScroll() {
+
+    const scrollPosition =
+        window.scrollY;
 
 
+    // ------------------------------------------
     // Back To Top
+    // ------------------------------------------
 
-    if (window.scrollY > 500) {
+    if (topBtn) {
 
-        if (topBtn) {
+        if (scrollPosition > 500) {
 
             topBtn.style.display = "flex";
 
-        }
-
-    } else {
-
-        if (topBtn) {
+        } else {
 
             topBtn.style.display = "none";
 
@@ -109,11 +133,13 @@ window.addEventListener("scroll", () => {
     }
 
 
-    // Navbar
+    // ------------------------------------------
+    // Navbar Background
+    // ------------------------------------------
 
     if (nav) {
 
-        if (window.scrollY > 100) {
+        if (scrollPosition > 100) {
 
             nav.style.background =
                 "rgba(0,0,0,.95)";
@@ -127,18 +153,30 @@ window.addEventListener("scroll", () => {
 
     }
 
-});
+}
 
 
-// =========================
+window.addEventListener(
+    "scroll",
+    handleScroll,
+    { passive: true }
+);
+
+
+// Run once when page loads
+
+handleScroll();
+
+
+// ======================================================
 // Smooth Back To Top
-// =========================
+// ======================================================
 
 if (topBtn) {
 
-    topBtn.addEventListener("click", (e) => {
+    topBtn.addEventListener("click", (event) => {
 
-        e.preventDefault();
+        event.preventDefault();
 
         window.scrollTo({
 
@@ -153,152 +191,386 @@ if (topBtn) {
 }
 
 
-// =========================
+// ======================================================
+// Smooth Navigation
+// ======================================================
+
+const navigationLinks =
+    document.querySelectorAll(
+        'a[href^="#"]'
+    );
+
+
+navigationLinks.forEach((link) => {
+
+    link.addEventListener("click", (event) => {
+
+        const targetId =
+            link.getAttribute("href");
+
+        if (
+            !targetId ||
+            targetId === "#"
+        ) {
+            return;
+        }
+
+
+        const target =
+            document.querySelector(targetId);
+
+
+        if (!target) {
+            return;
+        }
+
+
+        event.preventDefault();
+
+
+        target.scrollIntoView({
+
+            behavior: "smooth",
+
+            block: "start"
+
+        });
+
+    });
+
+});
+
+
+// ======================================================
 // Section Scroll Animation
-// =========================
+// ======================================================
 
 const sections =
     document.querySelectorAll("section");
 
 
-const sectionObserver =
-    new IntersectionObserver(
+if ("IntersectionObserver" in window) {
 
-        (entries) => {
+    const sectionObserver =
+        new IntersectionObserver(
 
-            entries.forEach((entry) => {
+            (entries) => {
 
-                if (entry.isIntersecting) {
+                entries.forEach((entry) => {
 
-                    entry.target.classList.add(
-                        "visible"
-                    );
+                    if (entry.isIntersecting) {
 
-                }
+                        entry.target.classList.add(
+                            "visible"
+                        );
 
-            });
+                    }
 
-        },
+                });
 
-        {
-            threshold: 0.12
-        }
+            },
 
-    );
+            {
+                threshold: 0.12
+            }
 
-
-sections.forEach((section) => {
-
-    sectionObserver.observe(section);
-
-});
+        );
 
 
-// =========================
+    sections.forEach((section) => {
+
+        sectionObserver.observe(section);
+
+    });
+
+} else {
+
+    // Fallback for older browsers
+
+    sections.forEach((section) => {
+
+        section.classList.add("visible");
+
+    });
+
+}
+
+
+// ======================================================
 // Counter Animation
-// =========================
+// ======================================================
 
 const counters =
     document.querySelectorAll(".counter");
 
 
-const counterObserver =
-    new IntersectionObserver(
+if (
+    counters.length &&
+    "IntersectionObserver" in window
+) {
 
-        (entries, observer) => {
+    const counterObserver =
+        new IntersectionObserver(
 
-            entries.forEach((entry) => {
+            (entries, observer) => {
 
-                if (!entry.isIntersecting) {
+                entries.forEach((entry) => {
 
-                    return;
+                    if (!entry.isIntersecting) {
 
-                }
-
-
-                const counter =
-                    entry.target;
-
-
-                const target =
-                    Number(
-                        counter.dataset.target
-                    );
-
-
-                let current = 0;
-
-
-                const duration = 1200;
-
-                const startTime =
-                    performance.now();
-
-
-                function updateCounter(
-                    currentTime
-                ) {
-
-
-                    const progress =
-                        Math.min(
-
-                            (
-                                currentTime -
-                                startTime
-                            ) / duration,
-
-                            1
-
-                        );
-
-
-                    current =
-                        Math.floor(
-                            progress * target
-                        );
-
-
-                    counter.textContent =
-                        current;
-
-
-                    if (progress < 1) {
-
-                        requestAnimationFrame(
-                            updateCounter
-                        );
-
-                    } else {
-
-                        counter.textContent =
-                            target;
+                        return;
 
                     }
 
-                }
+
+                    const counter =
+                        entry.target;
 
 
-                requestAnimationFrame(
-                    updateCounter
+                    const target =
+                        Number(
+                            counter.dataset.target
+                        );
+
+
+                    if (
+                        !Number.isFinite(target) ||
+                        target < 0
+                    ) {
+
+                        return;
+
+                    }
+
+
+                    let current = 0;
+
+
+                    const duration = 1200;
+
+                    const startTime =
+                        performance.now();
+
+
+                    function updateCounter(
+                        currentTime
+                    ) {
+
+                        const progress =
+                            Math.min(
+
+                                (
+                                    currentTime -
+                                    startTime
+                                ) / duration,
+
+                                1
+
+                            );
+
+
+                        current =
+                            Math.floor(
+                                progress * target
+                            );
+
+
+                        counter.textContent =
+                            current;
+
+
+                        if (progress < 1) {
+
+                            requestAnimationFrame(
+                                updateCounter
+                            );
+
+                        } else {
+
+                            counter.textContent =
+                                target;
+
+                        }
+
+                    }
+
+
+                    requestAnimationFrame(
+                        updateCounter
+                    );
+
+
+                    observer.unobserve(counter);
+
+                });
+
+            },
+
+            {
+                threshold: 0.6
+            }
+
+        );
+
+
+    counters.forEach((counter) => {
+
+        counterObserver.observe(counter);
+
+    });
+
+} else {
+
+    // Fallback
+
+    counters.forEach((counter) => {
+
+        const target =
+            Number(
+                counter.dataset.target
+            );
+
+
+        if (Number.isFinite(target)) {
+
+            counter.textContent =
+                target;
+
+        }
+
+    });
+
+}
+
+
+// ======================================================
+// Native Share
+// ======================================================
+// Optional.
+// If an element has class="share-btn",
+// it can share the official Kenda website.
+//
+// Example:
+// <button class="share-btn">Share</button>
+// ======================================================
+
+const shareButtons =
+    document.querySelectorAll(".share-btn");
+
+
+shareButtons.forEach((button) => {
+
+    button.addEventListener("click", async () => {
+
+        const shareData = {
+
+            title:
+                document.title ||
+                "Kenda Mohamed Adel | Egyptian Taekwondo Champion",
+
+            text:
+                "Kenda Mohamed Adel - Egyptian Taekwondo Champion",
+
+            url:
+                window.location.href
+
+        };
+
+
+        try {
+
+            if (navigator.share) {
+
+                await navigator.share(
+                    shareData
+                );
+
+            } else {
+
+                await navigator.clipboard.writeText(
+                    window.location.href
                 );
 
 
-                observer.unobserve(counter);
+                const originalText =
+                    button.textContent;
 
-            });
 
-        },
+                button.textContent =
+                    "Link Copied";
 
-        {
-            threshold: 0.6
+
+                setTimeout(() => {
+
+                    button.textContent =
+                        originalText;
+
+                }, 2000);
+
+            }
+
+        } catch (error) {
+
+            // User cancelled sharing.
+            // No action required.
+
         }
 
+    });
+
+});
+
+
+// ======================================================
+// External Social Links
+// ======================================================
+// Keep Facebook, Instagram and TikTok links
+// opening safely in a new tab.
+// ======================================================
+
+const socialLinks =
+    document.querySelectorAll(
+        'a[href*="facebook.com"], ' +
+        'a[href*="instagram.com"], ' +
+        'a[href*="tiktok.com"]'
     );
 
 
-counters.forEach((counter) => {
+socialLinks.forEach((link) => {
 
-    counterObserver.observe(counter);
+    link.setAttribute(
+        "target",
+        "_blank"
+    );
+
+    link.setAttribute(
+        "rel",
+        "noopener noreferrer"
+    );
 
 });
+
+
+// ======================================================
+// Accessibility - Gallery Images
+// ======================================================
+
+images.forEach((image) => {
+
+    if (!image.alt || !image.alt.trim()) {
+
+        image.alt =
+            "Kenda Mohamed Adel - Egyptian Taekwondo Champion";
+
+    }
+
+});
+
+
+// ======================================================
+// Page Ready
+// ======================================================
+
+document.documentElement.classList.add(
+    "js-enabled"
+);
